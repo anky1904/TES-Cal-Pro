@@ -1,421 +1,1839 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4F46E5">
-    <meta name="description" content="TES Pro - Transformer Engineer Suite by Ankush Sable">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <title>TES Pro | Transformer Engineer Suite</title>
+<meta charset="UTF-8">
 
-    <link rel="manifest" href="manifest.json">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color"
+content="#0F172A">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<meta
+name="description"
+content="TES Pro - Professional Transformer Engineering Suite">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css">
+<title>
+TES Pro | Transformer Engineer Suite
+</title>
+
+<link rel="manifest"
+href="manifest.json">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="css/style.css">
+
+<link
+rel="stylesheet"
+href="css/mobile.css">
+
 </head>
 
 <body>
 
-<div class="app-layout">
+<div class="background-grid"></div>
 
-    <aside class="sidebar" id="sidebar">
+<div class="background-gradient"></div>
 
-        <div class="brand">
+<div class="app">
 
-            <div class="brand-logo">
-                <span class="material-icons-round">electrical_services</span>
-            </div>
+<!-- ===================================================== -->
+<!-- SIDEBAR -->
+<!-- ===================================================== -->
 
-            <div class="brand-text">
-                <h1>TES Pro</h1>
-                <p>Transformer Engineer Suite</p>
-            </div>
+<aside
+class="sidebar"
+id="sidebar">
 
-        </div>
+<div class="brand">
 
-        <nav class="sidebar-nav">
+<div class="brand-icon">
 
-            <button class="nav-item active">
-                <span class="material-icons-round">dashboard</span>
-                <span>Dashboard</span>
-            </button>
+<span class="material-icons-round">
 
-            <button class="nav-item">
-                <span class="material-icons-round">calculate</span>
-                <span>Turns Calculator</span>
-            </button>
+electrical_services
 
-            <button class="nav-item">
-                <span class="material-icons-round">analytics</span>
-                <span>Reports</span>
-            </button>
+</span>
 
-            <button class="nav-item">
-                <span class="material-icons-round">engineering</span>
-                <span>Engineering</span>
-            </button>
+</div>
 
-            <button class="nav-item">
-                <span class="material-icons-round">settings</span>
-                <span>Settings</span>
-            </button>
+<div>
 
-        </nav>
+<h2>
 
-    </aside>
+TES Pro
 
-    <main class="main-content">
+</h2>
 
-        <header class="topbar">
+<p>
 
-            <button class="menu-btn" id="menuBtn">
-                <span class="material-icons-round">menu</span>
-            </button>
+Transformer Engineer Suite
 
-            <div class="topbar-title">
-                <h2>Transformer Engineer Suite</h2>
-                <p>Professional Engineering Dashboard</p>
-            </div>
+</p>
 
-        </header>
+</div>
 
-        <section class="hero">
+</div>
 
-            <div class="hero-left">
+<nav>
 
-                <span class="hero-badge">
-                    Premium Engineering Software
-                </span>
+<button class="nav-item active">
 
-                <h1>
-                    Transformer Turns Ratio Calculator
-                </h1>
+<span class="material-icons-round">
 
-                <p>
-                    Calculate HV turns, turns ratio, tap coil turns and transformer winding values with a modern engineering dashboard.
-                </p>
+dashboard
 
-            </div>
+</span>
 
-            <div class="hero-right">
+Dashboard
 
-                <div class="hero-card success-card">
+</button>
 
-                    <span class="material-icons-round">
-                        verified
-                    </span>
+<button class="nav-item">
 
-                    <h3>Engineering Grade</h3>
+<span class="material-icons-round">
 
-                    <p>
-                        Accurate winding calculations
-                    </p>
+calculate
 
-                </div>
+</span>
 
-            </div>
+Engineering Calculator
 
-        </section>
+</button>
 
-        <section class="stats-grid">
+<button class="nav-item">
 
-            <div class="stat-card blue-card">
+<span class="material-icons-round">
 
-                <span class="material-icons-round">
-                    bolt
-                </span>
+analytics
 
-                <h3>HV Voltage</h3>
+</span>
 
-                <p id="hvDisplay">--</p>
+Reports
 
-            </div>
+</button>
 
-            <div class="stat-card purple-card">
+<button class="nav-item">
 
-                <span class="material-icons-round">
-                    electric_bolt
-                </span>
+<span class="material-icons-round">
 
-                <h3>LV Voltage</h3>
+folder
 
-                <p id="lvDisplay">--</p>
+</span>
 
-            </div>
+Projects
 
-            <div class="stat-card green-card">
+</button>
 
-                <span class="material-icons-round">
-                    functions
-                </span>
+<button class="nav-item">
 
-                <h3>Turns Ratio</h3>
+<span class="material-icons-round">
 
-                <p id="ratioDisplay">--</p>
+table_chart
 
-            </div>
+</span>
 
-            <div class="stat-card orange-card">
+Engineering Tables
 
-                <span class="material-icons-round">
-                    precision_manufacturing
-                </span>
+</button>
 
-                <h3>Total HV Turns</h3>
+<button class="nav-item">
 
-                <p id="turnDisplay">--</p>
+<span class="material-icons-round">
 
-            </div>
+settings
 
-        </section>
+</span>
 
-        <section class="calculator-layout">
+Settings
 
-            <div class="glass-card">
+</button>
 
-                <div class="card-header">
+</nav>
 
-                    <span class="material-icons-round">
-                        calculate
-                    </span>
+<div class="sidebar-footer">
 
-                    <h2>Transformer Calculator</h2>
+<div class="license-card">
 
-                </div>
+<span class="material-icons-round">
 
-                <form id="calculatorForm">
+verified
 
-                    <div class="form-grid">
+</span>
 
-                        <div class="form-group">
+<div>
 
-                            <label for="hvVoltage">
-                                HV Voltage (kV)
-                            </label>
+<h4>
 
-                            <input
-                                id="hvVoltage"
-                                type="number"
-                                step="0.01"
-                                placeholder="400"
-                            >
+Professional Edition
 
-                        </div>
+</h4>
 
-                        <div class="form-group">
+<p>
 
-                            <label for="lvVoltage">
-                                LV Voltage (V)
-                            </label>
+Transformer Design Suite
 
-                            <input
-                                id="lvVoltage"
-                                type="number"
-                                step="0.01"
-                                placeholder="433"
-                            >
+</p>
 
-                        </div>
+</div>
 
-                        <div class="form-group">
+</div>
 
-                            <label for="vectorGroup">
-                                Vector Group
-                            </label>
+</div>
 
-                            <select id="vectorGroup">
+</aside>
 
-                                <option value="Dyn11">
-                                    Dyn11
-                                </option>
+<!-- ===================================================== -->
+<!-- MAIN -->
+<!-- ===================================================== -->
 
-                                <option value="YNd1">
-                                    YNd1
-                                </option>
+<main class="main">
 
-                                <option value="YNyn0">
-                                    YNyn0
-                                </option>
+<header class="topbar">
 
-                                <option value="Yd11">
-                                    Yd11
-                                </option>
+<div class="top-left">
 
-                                <option value="Dd0">
-                                    Dd0
-                                </option>
+<button
+class="menu-btn"
+id="menuBtn">
 
-                            </select>
+<span class="material-icons-round">
 
-                        </div>
+menu
 
-                        <div class="form-group">
+</span>
 
-                            <label for="lvTurns">
-                                LV Turns
-                            </label>
+</button>
 
-                            <input
-                                id="lvTurns"
-                                type="number"
-                                placeholder="28"
-                            >
+<div>
 
-                        </div>
+<h1>
 
-                        <div class="form-group">
+Transformer Engineer Suite
 
-                            <label for="hvCoils">
-                                HV Coils
-                            </label>
+</h1>
 
-                            <input
-                                id="hvCoils"
-                                type="number"
-                                placeholder="8"
-                            >
+<p>
 
-                        </div>
+Professional Power Transformer Design Platform
 
-                        <div class="form-group">
+</p>
 
-                            <label for="tapValues">
-                                Tap Values (%)
-                            </label>
+</div>
 
-                            <input
-                                id="tapValues"
-                                type="text"
-                                value="+5,+2.5,0,-2.5,-5"
-                            >
+</div>
 
-                        </div>
+<div class="top-right">
 
-                    </div>
+<div class="status-card">
 
-                    <div class="button-row">
+<span
+class="status-dot">
+</span>
 
-                        <button
-                            type="button"
-                            id="calculateBtn"
-                            class="primary-btn"
-                        >
+Engineering Mode
 
-                            <span class="material-icons-round">
-                                calculate
-                            </span>
+</div>
 
-                            Calculate
+</div>
 
-                        </button>
+</header>
 
-                        <button
-                            type="reset"
-                            class="secondary-btn"
-                        >
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
 
-                            <span class="material-icons-round">
-                                refresh
-                            </span>
+<section class="hero">
 
-                            Reset
+<div class="hero-content">
 
-                        </button>
+<span class="hero-tag">
 
-                    </div>
+Professional Engineering Software
 
-                </form>
+</span>
 
-            </div>
+<h1>
 
-            <div class="glass-card">
+Design, Calculate & Analyse
+Power Transformers
 
-                <div class="card-header">
+</h1>
 
-                    <span class="material-icons-round">
-                        assessment
-                    </span>
+<p>
 
-                    <h2>Calculation Result</h2>
+Professional engineering suite for
+Transformer Manufacturers,
+Design Engineers,
+Testing Engineers
+and Production Teams.
 
-                </div>
+</p>
 
-                <div class="result-grid">
+<div class="hero-buttons">
 
-                    <div class="result-item">
+<button class="primary-btn">
 
-                        <span>Turns Ratio</span>
+<span class="material-icons-round">
 
-                        <strong id="resultRatio">
-                            --
-                        </strong>
+bolt
 
-                    </div>
+</span>
 
-                    <div class="result-item">
+Start Engineering
 
-                        <span>Total HV Turns</span>
+</button>
 
-                        <strong id="resultTurns">
-                            --
-                        </strong>
+<button class="secondary-btn">
 
-                    </div>
+<span class="material-icons-round">
 
-                    <div class="result-item">
+description
 
-                        <span>Turns Per Coil</span>
+</span>
 
-                        <strong id="resultPerCoil">
-                            --
-                        </strong>
+Generate Report
 
-                    </div>
+</button>
 
-                    <div class="result-item">
+</div>
 
-                        <span>Tap Values</span>
+</div>
 
-                        <strong id="resultTap">
-                            --
-                        </strong>
+<div class="hero-image">
 
-                    </div>
+<div class="floating-card">
 
-                    <div class="result-item full-width">
+<span class="material-icons-round">
 
-                        <span>Tap Coil Turns</span>
+precision_manufacturing
 
-                        <div id="tapTable">
+</span>
 
-                        </div>
+<h3>
 
-                    </div>
+Engineering Ready
 
-                </div>
+</h3>
 
-            </div>
+<p>
 
-        </section>
+Transformer Design
 
-        <footer>
+</p>
 
-            Tool Designed by Ankush Sable ❤️
+</div>
 
-        </footer>
+</div>
 
-    </main>
+</section>
+
+<!-- ===================================================== -->
+<!-- DASHBOARD -->
+<!-- ===================================================== -->
+
+<section class="dashboard-grid">
+
+<div class="metric-card blue">
+
+<div>
+
+<p>
+
+Turns Ratio
+
+</p>
+
+<h2
+id="ratioDisplay">
+
+--
+
+</h2>
+
+</div>
+
+<span class="material-icons-round">
+
+functions
+
+</span>
+
+</div>
+
+<div class="metric-card green">
+
+<div>
+
+<p>
+
+HV Turns
+
+</p>
+
+<h2
+id="turnDisplay">
+
+--
+
+</h2>
+
+</div>
+
+<span class="material-icons-round">
+
+electrical_services
+
+</span>
+
+</div>
+
+<div class="metric-card orange">
+
+<div>
+
+<p>
+
+HV Voltage
+
+</p>
+
+<h2
+id="hvDisplay">
+
+--
+
+</h2>
+
+</div>
+
+<span class="material-icons-round">
+
+bolt
+
+</span>
+
+</div>
+
+<div class="metric-card purple">
+
+<div>
+
+<p>
+
+LV Voltage
+
+</p>
+
+<h2
+id="lvDisplay">
+
+--
+
+</h2>
+
+</div>
+
+<span class="material-icons-round">
+
+flash_on
+
+</span>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ENGINEERING PANEL -->
+<!-- ===================================================== -->
+
+<section
+class="engineering-layout">
+
+<form
+id="calculatorForm"
+class="engineering-form">
+<!-- ===================================================== -->
+<!-- PROJECT DETAILS -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+assignment
+
+</span>
+
+<h2>
+
+Project Details
+
+</h2>
+
+</div>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>
+
+Project Name
+
+</label>
+
+<input
+type="text"
+id="projectName"
+placeholder="400kV ICT Transformer">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Customer Name
+
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Customer">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Transformer Rating
+
+</label>
+
+<input
+type="text"
+id="rating"
+placeholder="315 MVA">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Frequency
+
+</label>
+
+<select id="frequency">
+
+<option value="50">
+
+50 Hz
+
+</option>
+
+<option value="60">
+
+60 Hz
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+No. of Phases
+
+</label>
+
+<select id="phase">
+
+<option value="3">
+
+Three Phase
+
+</option>
+
+<option value="1">
+
+Single Phase
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Vector Group
+
+</label>
+
+<select id="vectorGroup">
+
+<option value="YNd1">
+
+YNd1
+
+</option>
+
+<option value="YNd11">
+
+YNd11
+
+</option>
+
+<option value="Dyn11">
+
+Dyn11
+
+</option>
+
+<option value="Dyn1">
+
+Dyn1
+
+</option>
+
+<option value="Yd11">
+
+Yd11
+
+</option>
+
+<option value="Yy0">
+
+Yy0
+
+</option>
+
+<option value="Dd0">
+
+Dd0
+
+</option>
+
+<option value="YNyn0">
+
+YNyn0
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- HV DETAILS -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+bolt
+
+</span>
+
+<h2>
+
+High Voltage Winding
+
+</h2>
+
+</div>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>
+
+HV Line Voltage (kV)
+
+</label>
+
+<input
+type="number"
+step="0.01"
+id="hvVoltage"
+placeholder="400">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+HV Connection
+
+</label>
+
+<select id="hvConnection">
+
+<option value="STAR">
+
+Star
+
+</option>
+
+<option value="DELTA">
+
+Delta
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+HV Coils / Phase
+
+</label>
+
+<input
+type="number"
+id="hvCoils"
+placeholder="8">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Turns Per Coil (Optional)
+
+</label>
+
+<input
+type="number"
+id="coilTurns"
+placeholder="Auto Calculate">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- LV DETAILS -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+flash_on
+
+</span>
+
+<h2>
+
+Low Voltage Winding
+
+</h2>
+
+</div>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>
+
+LV Line Voltage (V)
+
+</label>
+
+<input
+type="number"
+step="0.01"
+id="lvVoltage"
+placeholder="433">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+LV Connection
+
+</label>
+
+<select id="lvConnection">
+
+<option value="DELTA">
+
+Delta
+
+</option>
+
+<option value="STAR">
+
+Star
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+LV Turns
+
+</label>
+
+<input
+type="number"
+id="lvTurns"
+placeholder="28">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Turns / Volt (Optional)
+
+</label>
+
+<input
+type="number"
+step="0.01"
+id="turnPerVolt"
+placeholder="Auto">
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!-- CORE DETAILS -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+memory
+
+</span>
+
+<h2>
+
+Core Details
+
+</h2>
+
+</div>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>
+
+Core Area (cm²)
+
+</label>
+
+<input
+type="number"
+step="0.01"
+id="coreArea"
+placeholder="Optional">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Flux Density (Tesla)
+
+</label>
+
+<input
+type="number"
+step="0.01"
+id="fluxDensity"
+placeholder="1.65">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Frequency (Hz)
+
+</label>
+
+<input
+type="number"
+id="coreFrequency"
+placeholder="50">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Turns Per Volt
+
+</label>
+
+<input
+type="number"
+step="0.001"
+id="turnsPerVolt"
+placeholder="Auto / Manual">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- TAP CHANGER -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+tune
+
+</span>
+
+<h2>
+
+Tap Changer Details
+
+</h2>
+
+</div>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>
+
+Tap Changer
+
+</label>
+
+<select id="tapChanger">
+
+<option value="OLTC">
+
+OLTC
+
+</option>
+
+<option value="OCTC">
+
+OCTC
+
+</option>
+
+<option value="NONE">
+
+None
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Tap Range (%)
+
+</label>
+
+<select id="tapRange">
+
+<option value="5">
+
+±5%
+
+</option>
+
+<option value="10">
+
+±10%
+
+</option>
+
+<option value="15">
+
+±15%
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Tap Step (%)
+
+</label>
+
+<select id="tapStep">
+
+<option value="1.25">
+
+1.25%
+
+</option>
+
+<option value="2.5" selected>
+
+2.5%
+
+</option>
+
+<option value="5">
+
+5%
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Tap Coil Type
+
+</label>
+
+<select id="tapCoilType">
+
+<option value="SINGLE">
+
+Single Coil
+
+</option>
+
+<option value="DOUBLE">
+
+Double Coil
+
+</option>
+
+<option value="DISTRIBUTED">
+
+Distributed
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Tap Coil Number
+
+</label>
+
+<input
+type="number"
+id="tapCoilNo"
+placeholder="1">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Tap Position
+
+</label>
+
+<select id="tapPosition">
+
+<option value="+5">
+
++5%
+
+</option>
+
+<option value="+2.5">
+
++2.5%
+
+</option>
+
+<option value="0" selected>
+
+Normal
+
+</option>
+
+<option value="-2.5">
+
+-2.5%
+
+</option>
+
+<option value="-5">
+
+-5%
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="button-group">
+
+<button
+type="button"
+id="calculateBtn"
+class="primary-btn">
+
+<span class="material-icons-round">
+
+calculate
+
+</span>
+
+Calculate
+
+</button>
+
+<button
+type="reset"
+class="secondary-btn">
+
+<span class="material-icons-round">
+
+restart_alt
+
+</span>
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!-- RESULTS PANEL -->
+<!-- ===================================================== -->
+
+<div class="results-panel">
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+analytics
+
+</span>
+
+<h2>
+
+Engineering Results
+
+</h2>
+
+</div>
+
+<div class="results-grid">
+
+<div class="result-card">
+
+<span>
+
+Line Ratio
+
+</span>
+
+<h3 id="resultLineRatio">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+Phase Ratio
+
+</span>
+
+<h3 id="resultRatio">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+HV Phase Voltage
+
+</span>
+
+<h3 id="resultHVPhase">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+LV Phase Voltage
+
+</span>
+
+<h3 id="resultLVPhase">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+Total HV Turns
+
+</span>
+
+<h3 id="resultTurns">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+Total LV Turns
+
+</span>
+
+<h3 id="resultLVTurns">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+Turns / Coil
+
+</span>
+
+<h3 id="resultPerCoil">
+
+--
+
+</h3>
+
+</div>
+
+<div class="result-card">
+
+<span>
+
+Tap Position
+
+</span>
+
+<h3 id="resultTap">
+
+--
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- HV TURN TABLE -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+table_chart
+
+</span>
+
+<h2>
+
+HV Winding Calculation
+
+</h2>
+
+</div>
+
+<table class="result-table">
+
+<thead>
+
+<tr>
+
+<th>
+
+Parameter
+
+</th>
+
+<th>
+
+Value
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Turns Ratio
+
+</td>
+
+<td id="tableRatio">
+
+--
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+HV Phase Voltage
+
+</td>
+
+<td id="tableHVPhase">
+
+--
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+LV Phase Voltage
+
+</td>
+
+<td id="tableLVPhase">
+
+--
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Total HV Turns
+
+</td>
+
+<td id="tableHVTurns">
+
+--
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Turns Per Coil
+
+</td>
+
+<td id="tableCoilTurns">
+
+--
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- TAP TABLE -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+swap_vert
+
+</span>
+
+<h2>
+
+Tap Calculation
+
+</h2>
+
+</div>
+
+<div id="tapTable">
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- TAP COIL TABLE -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+hub
+
+</span>
+
+<h2>
+
+Tap Coil Position
+
+</h2>
+
+</div>
+
+<div id="tapCoilTable">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===================================================== -->
+<!-- ENGINEERING SUMMARY -->
+<!-- ===================================================== -->
+
+<section class="summary-section">
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+summarize
+
+</span>
+
+<h2>
+
+Engineering Summary
+
+</h2>
+
+</div>
+
+<div class="summary-grid">
+
+<div class="summary-item">
+
+<label>
+
+Project
+
+</label>
+
+<span id="summaryProject">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Customer
+
+</label>
+
+<span id="summaryCustomer">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Transformer Rating
+
+</label>
+
+<span id="summaryRating">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Frequency
+
+</label>
+
+<span id="summaryFrequency">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Vector Group
+
+</label>
+
+<span id="summaryVector">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Tap Changer
+
+</label>
+
+<span id="summaryTap">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Tap Coil Type
+
+</label>
+
+<span id="summaryTapCoil">
+
+--
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<label>
+
+Generated On
+
+</label>
+
+<span id="summaryDate">
+
+--
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- QUICK ACTIONS -->
+<!-- ===================================================== -->
+
+<div class="glass-card">
+
+<div class="card-title">
+
+<span class="material-icons-round">
+
+rocket_launch
+
+</span>
+
+<h2>
+
+Quick Actions
+
+</h2>
+
+</div>
+
+<div class="action-grid">
+
+<button
+type="button"
+id="saveProject"
+class="action-btn">
+
+<span class="material-icons-round">
+
+save
+
+</span>
+
+Save Project
+
+</button>
+
+<button
+type="button"
+id="exportPDF"
+class="action-btn">
+
+<span class="material-icons-round">
+
+picture_as_pdf
+
+</span>
+
+Export PDF
+
+</button>
+
+<button
+type="button"
+id="exportExcel"
+class="action-btn">
+
+<span class="material-icons-round">
+
+table_view
+
+</span>
+
+Export Excel
+
+</button>
+
+<button
+type="button"
+id="printReport"
+class="action-btn">
+
+<span class="material-icons-round">
+
+print
+
+</span>
+
+Print Report
+
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+
+<h3>
+
+TES Pro
+
+</h3>
+
+<p>
+
+Professional Transformer Engineering Suite
+
+</p>
+
+</div>
+
+<div>
+
+<p>
+
+Tool Designed by Ankush Sable ❤️
+
+</p>
+
+<p>
+
+Version 2.0 Professional Edition
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+</form>
+
+</main>
 
 </div>
 
 <script src="js/calculator.js"></script>
+
 <script src="js/app.js"></script>
 
 </body>
+
 </html>
